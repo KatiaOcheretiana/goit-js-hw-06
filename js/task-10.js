@@ -14,7 +14,7 @@ const boxes = document.querySelector('#boxes')
 createBtn.addEventListener('click', createBoxes)
 
 function createBoxes() {
-  const amount = inputNumber.value;
+  const amount = parseInt(inputNumber.value);
   let boxSize = 30;
   const boxArray = []
 
@@ -24,10 +24,8 @@ function createBoxes() {
     box.style.width = `${boxSize}px`;
     box.style.height = `${boxSize}px`;
     box.style.backgroundColor = getRandomHexColor();
-
   boxArray.push(box)
   }
-  
 boxes.append(...boxArray)
 }
 
