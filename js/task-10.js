@@ -16,16 +16,18 @@ createBtn.addEventListener('click', createBoxes)
 function createBoxes() {
   const amount = inputNumber.value;
   let boxSize = 30;
+  const boxArray = []
 
-  for (let i = 0; i <= amount; i++) {
+  for (let i = 1; i <= amount; i++) {
     boxSize += 10;
     const box = document.createElement('div')
     box.style.width = `${boxSize}px`;
     box.style.height = `${boxSize}px`;
     box.style.backgroundColor = getRandomHexColor();
-  
-    boxes.append(box);
+
+  boxArray.push(box)
   }
+boxes.append(...boxArray)
 }
 
 
