@@ -27,6 +27,7 @@ function createBoxes() {
 
   boxArray.push(box)
   }
+  
 boxes.append(...boxArray)
 }
 
